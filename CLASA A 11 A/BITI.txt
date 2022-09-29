@@ -1,0 +1,37 @@
+
+
+(a<<b) = a * 2^b
+(a>>b) = a / 2^b
+
+
+OPERATII REMARCABILE
+1<<k = 2^k
+1LL<<k 2^k cu LL
+
+n>>1 = n / 2
+
+n&1 = n % 2
+
+n^n = 0 (^ fiind XOR)
+n^n^n = n
+n^0 = 0
+XOR aplicat de numar par = 0
+XOR aplicat de nr impar = n
+
+(n>>k)&1 -> valoarea bitului k
+
+n = n + (1<<k) -> n + 2^k
+
+n = (n | (1<<k)) -> setam la 1 bitul k
+n = (n & ~(1<<k)) -> setam la 0 bitul k
+
+cout<<__builtin_popcount(n) -> nr biti de 1 din n
+
+SAU 
+
+while(n)
+{
+    n -= (n&-n);
+    ctm++;
+}
+cout<<ctm;
